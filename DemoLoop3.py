@@ -27,6 +27,11 @@ for i in range(5):
 
 #리스트함축(리스트내장, 압축)
 lst = list(range(1,11))
+# print("---기존 언어의 코드---")
+# for i in lst:
+#     if i > 5:
+#         print(i**2)
+# ctrl + / :다중라인 주석 처리 
 result2 = [i**2 for i in lst if i > 5]
 print(result2)
 

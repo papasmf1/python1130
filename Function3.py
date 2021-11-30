@@ -8,3 +8,24 @@ print( times() )
 print( times(5) )
 print( times(5,6) )
 
+#키워드 인자 방식으로 전달한다. 
+def userURI(server, port):
+    strURL = "http://" + server + ":" + port 
+    return strURL 
+
+#호출
+print( userURI("credu.com", "80") )
+print( userURI(port="8080", server="credu.com") )
+
+#가변인자는 입력되는 인자의 갯수가 가변적인 경우
+def union(*ar):
+    result = []
+    for item in ar:
+        for x in item:
+            if x not in result:
+                result.append(x)
+    return result 
+
+#호출
+print( union("HAM","EGG") )
+print( union("HAM","EGG","SPAM") )

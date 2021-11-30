@@ -1,0 +1,10 @@
+# Function3.py 
+#함수의 기본값이 있는 경우
+def times(a=10, b=20):
+    return a*b 
+
+#호출
+print( times() )
+print( times(5) )
+print( times(5,6) )
+

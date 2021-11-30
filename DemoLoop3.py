@@ -7,11 +7,18 @@ for i in lst:
         break
     print("Item:{0}".format(i))
 
-print("---continue---")
+print("---홀수를 출력---")
 for i in lst:
     if i % 2 == 0:
         continue
     print("Item:{0}".format(i))
+
+print("---짝수를 출력---")
+for i in lst:
+    if i % 2 == 1:
+        continue
+    print("Item:{0}".format(i))
+
 
 print("---수열함수---")
 result = list(range(10))
@@ -43,3 +50,4 @@ d = {100:"apple", 200:"orange", 300:"kiwi"}
 print( [v.upper() for v in d.values()] )
 
 
+print("첫번째:{0} 두번째:{1}".format(10, 20))

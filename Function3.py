@@ -18,14 +18,20 @@ print( userURI("credu.com", "80") )
 print( userURI(port="8080", server="credu.com") )
 
 #가변인자는 입력되는 인자의 갯수가 가변적인 경우
+#인자에 *를 붙이면 가변인자(내부에서 Tuple)
 def union(*ar):
+    #지역변수로 결과를 담을 리스트를 초기화 
     result = []
+    #HAM(0) | EGG(1) ==> ar이라는 가변인자 
     for item in ar:
+        #H(0) | A(1) | M(2)
+        #E(0) | G(1) | G(2)
         for x in item:
+            #x라는 글자가 포함되어 있지 않다면 추가 
             if x not in result:
                 result.append(x)
     return result 
 
-#호출
+#호출(중단점, Break Point)
 print( union("HAM","EGG") )
 print( union("HAM","EGG","SPAM") )

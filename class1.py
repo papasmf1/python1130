@@ -1,6 +1,6 @@
 # class1.py 
 #1)클래스 형식을 정의(원본):쿠키틀 
-class Person:
+class Person(object):
     #생성자(초기화)메서드
     def __init__(self):
         #인스턴스의 멤버 변수를 초기화 

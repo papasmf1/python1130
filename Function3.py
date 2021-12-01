@@ -42,7 +42,7 @@ def userURIBuilder(server, port, **user):
     strURL = "http://" + server + ":" + port + "/?"
     for key in user.keys():
         strURL += key + "=" + user[key] + "&"
-    return strURL
+    return strURL[:-1]
 
 #호출
 print( userURIBuilder("naver.com", "80", id="kim", password="1234") )

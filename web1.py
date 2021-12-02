@@ -16,7 +16,15 @@ soup = BeautifulSoup(page, "html.parser")
 
 #조건이 있는 경우(필터링)
 #<p class="outer-text">컨텐츠</p>
-print( soup.find_all("p", class_="outer-text") )
+#파이썬의 키워드로 class가 제공 
+#print( soup.find_all("p", class_="outer-text") )
+
+#태그 안쪽의 문자열 가져오기
+#앞뒤에 태그를 버리고 컨텐츠만 가져오기( .text 속성)
+for item in soup.find_all("p"):
+    title = item.text.strip()
+    title = title.replace("\n", "")
+    print(title)
 
 
 

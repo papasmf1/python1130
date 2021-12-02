@@ -13,8 +13,13 @@ soup = BeautifulSoup(data, "html.parser")
 # </td>
 cartoons = soup.find_all("td", class_="title")
 print("갯수:{0}".format( len(cartoons) ))
-title = cartoons.find("a").text 
-link = cartoons.find("a")["href"]
+#첫번째 방에 있는 것을 슬라이싱 
+title = cartoons[0].find("a").text 
+link = cartoons[0].find("a")["href"]
 print(title)
 print(link)
+
+for item in cartoons:
+    title = item.find("a").text.strip()
+    print(title)
 
